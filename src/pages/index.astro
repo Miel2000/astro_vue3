@@ -1,36 +1,42 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Teste from '../components/Teste.vue';
-import Entreprise from '../layouts/Entreprise.vue';
-// import EntrepriseTest from '../layouts/EntrepriseTest.astro';
-import Navigation from '../layouts/Navigation.svelte';
-import data2 from '../data.js'
+import MainVueComponent from '../layouts/MainVueComponent.vue';
+import data from '../data.js'
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Fabien - Développeur web">
 	<main>
 	
 		<title>Ma page web</title>
 
-		<!-- <Navigation client:only="svelte" /> -->
-
-		<!-- <Teste client:load/> -->
-		<Entreprise client:only="vue" experiences={data2} />
-		<!-- <EntrepriseTest client:load  /> -->
-
-
 	</main>
+
+	<div class="main-container">
+		<MainVueComponent client:only="vue" experiences={data} />
+	</div>
 </Layout>
 
 <style>
  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@200&display=swap');
 	/* Expérience CONTAINER  */
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+
 	main {
 		max-width: 1300px;
 		margin: 0 auto;
 	}
+
+
+	.main-container {
+		max-width: 1300px;
+		margin: 0 auto;
+	}
+
 
 	/* Header */
 	header {

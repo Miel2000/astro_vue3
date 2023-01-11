@@ -8,7 +8,7 @@ export default {
 			img: "/img/logo-iseabloom.svg",
 			quality: "Agence web & Graphisme",
 			colors: {
-				deg: "328deg",
+				deg: "315deg",
 				left: "#f3b6092e",
 				right: "#ffd128d9"
 			},
@@ -66,7 +66,7 @@ export default {
 			id: "judith",
 			key: "Freelance",
 			name: "Judith Agency",
-			link: "http://www.judithcreativeagency.fr/",
+			link: "https://www.judithcreativeagency.fr/",
 			img: "/img/logo-judith.svg",
 			quality: "Agence de contenu digital pour créateur.",
 			
@@ -90,7 +90,7 @@ export default {
 				"SCSS. (BEM)",
 			],
 			mission: {
-				description: "Création d'un site basé sur des maquettes fournies par le client. Ce site est équipé d'un back-office conçu avec Strapi, qui permet au propriétaire du site de modifier certains éléments du contenu de manière autonome.",
+				description: "Création du site d'une agence d'artiste digitale sur maquettes fournies par la cliente. <a href='https://www.judithcreativeagency.fr/' title='https://www.judithcreativeagency.fr/' target='_blank' style='text-decoration: unset; color:rgb(28, 90, 148);'>Le site web </a> est équipé d'un back-office conçu avec Strapi, qui permet aux propriétaires du site de modifier certains éléments du contenu de manière autonome.",
 				reference: {
 					name: "Lionel",
 					linkedin: "https://www.linkedin.com/in/lionel-orsini-975766a8/"
@@ -151,7 +151,7 @@ export default {
 
 			],
 			mission: {
-				description: "Maintenance et évolution des applications OSIS, EAQ et MPM de la région Aix-Marseille Métropole afin de garantir leur fonctionnement optimal.",
+				description: "Maintenance et évolution des applications <a href='https://www.highconnexion.com/osis/' title='https://www.highconnexion.com/osis/' target='_blank' style='text-decoration: unset; color:rgb(28, 90, 148);'>OSIS</a>, <a href='https://ampmetropole.fr/mes-demarches/engages-au-quotidien/' title='https://ampmetropole.fr/mes-demarches/engages-au-quotidien/' target='_blank' style='text-decoration: unset; color:rgb(28, 90, 148);'>EAQ</a> et <a href='https://ampmetropole.fr/' title='https://ampmetropole.fr/' target='_blank' style='text-decoration: unset; color:rgb(28, 90, 148);'>MPM</a>  de la région Aix-Marseille Métropole afin de garantir leur fonctionnement optimal.",
 				reference: {
 					name: "Alexis",
 					linkedin: "https://www.linkedin.com/in/alexislustro/"
@@ -164,7 +164,7 @@ export default {
 					link: "https://www.linux.org/"
 				},
 				php: {
-					text: "PHP7",
+					text: "PHP",
 					link: "https://www.php.net/manual/fr/"
 				},
 				symfony: {
@@ -214,7 +214,7 @@ export default {
 				"Installation du script sur une Crontab quotidienne.",
 			],
 			mission: {
-				description: "Service de surveillance à domicile destiné aux personnes âgées. Lors de l'établissement d'un nouveau contrat, les informations saisies par l'utilisateur sont transmises de manière sécurisée à l 'API sous-traitante afin d'être enregistrées.",
+				description: "Service de surveillance à domicile destiné aux personnes âgées. Lors de l'établissement d'un nouveau contrat, les informations saisies par l'utilisateur sont transmises de manière sécurisée à l '<a href='https://www.senioradom.com/' title='https://www.senioradom.com/' target='_blank' style='text-decoration: unset; color:rgb(28, 90, 148);'>API sous-traitante</a> afin d'être enregistrées.",
 				reference: {
 					name: "Jérôme Jobard",
 					linkedin: "https://www.linkedin.com/in/j%C3%A9r%C3%B4me-jobard-9b5a2a89/"

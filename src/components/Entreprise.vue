@@ -1,40 +1,26 @@
 <script setup>
-	// import  { store }  from '../store'
-
-	import {ref} from 'vue';
-	import { useElementVisibility } from '@vueuse/core'
-	import { watch } from '@vue/runtime-core';
-
 
 	defineProps({
-		experiences: Object
-	})
-
-
-	// const targetElement = ref(null); 
-    // const targetIsVisible = useElementVisibility(targetElement);
-
-	// watch(targetIsVisible, (newVal, oldVal) =>  {
-	// 	console.log('target is visible  : ', newVal);
-	// } ) 
+			experiences: Object
+		})
 
 	let isDetailsVisible = true;
 
-
-
 </script>
 
+
 <template>
-	<div class="container">
+	<div class="entreprises-container">
 		<div v-for="exp in experiences.experiences" :key="exp.id">
 			<h1 class="titre">{{exp.name}}</h1>
 			<section ref="targetElement" class="box" >
 				<!-- <span></span> -->
-				<span :style="{background: 
-				'linear-gradient('+ exp.colors.deg + ', '+
-				exp.colors.left + 
-				', ' + 
-				exp.colors.right +
+				<span :style="{
+					background: 'linear-gradient('+ exp.colors.deg +
+					', ' +
+					exp.colors.left +
+					', ' + 
+					exp.colors.right +
 				')'}"></span>
 				
 				<div class="content">
@@ -73,29 +59,53 @@
 					</div>
 				</div>
 			</section>
-		
-			
-
 		</div>
-	</div>
-
-
-	
+  </div>
 </template>
 
 
 <style lang="scss" scoped>
 
-$primary: #333;
-$blue: rgb(28, 90, 148);
 
-$bgColor: var(--colors);
+@property --color1 {
+  syntax: '<color>';
+  initial-value:  #c5e7e538;
+  inherits: false;
+}
+
+@property --color2 {
+  syntax: '<color>';
+  initial-value:  #d5ebed3d;
+  inherits: false;
+}
+
+
+$primary: #333;
+$blue: #1563a7;
 
 .box {
 	&:hover {
 		span {
 			border-radius: 8px ;
 			transform: skewX(0deg) scaleX(1.3);
+		}
+
+		.image a img {
+			transform: scale(1.05);
+			transition-delay: .25s;
+			transition-property: transform;
+		}
+
+		.judith {
+			transition-delay: .25s;
+			transition-property: padding;
+			padding: 23px 11px 6px 11px;
+		}
+
+		.content {
+			--color1:#ffffff9c;
+			--color2:#ffffff3d;
+			background: linear-gradient(70deg, --color2,--color1);
 		}
 	}
 
@@ -110,12 +120,11 @@ $bgColor: var(--colors);
 }
 
 
-
 span {
 	position: absolute;
 	top: 0px;
 	left: 6%;
-    width: 49%;
+    width: 48%;
 	height: 300px;
 	text-decoration: none;
 	background: linear-gradient(315deg, #ffbc00, #ff0058);
@@ -126,10 +135,13 @@ span {
 }
 
 .box .content {
+	transition: --color1 0.75s, --color2 0.75s;
 	position: relative;
 	width: 5000px;
 	height: 254px;
-	background: rgba(255, 255, 255, 0.05);
+	// background: rgba(255, 255, 255, 0.05);
+
+	background: linear-gradient(75deg,var(--color1), var(--color2));
 	backdrop-filter: blur(8px);
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 	border-radius: 8px;
@@ -185,8 +197,10 @@ span {
 			margin: 0 auto;
 
 			a img {
+			
+				transition: .75s transform;
 				margin: 0 auto;
-				width: 200px;
+				width: 185px;
 			}
 		} 
 	}
@@ -212,12 +226,13 @@ span {
 	
 
 		a {
+			color: $blue;
 			padding: 8px 11px;
 			font-size: 13px;
 			white-space: nowrap;
 			transition: transform 0.3s;
 			&:hover {
-				transform: scale(1.1);
+				transform: translateY(-2px);
 			}
 		}
 	}
@@ -251,13 +266,12 @@ span {
 		transition: all 0.75s;
 		opacity:1;
 		margin-bottom: 30px;
-
-		
 	}
 
 	.judith {
+		transition: 0.75s padding;
 		background-color:#0f0f10;
-		padding: 19px 7px 7px 8px;
+		padding: 21px 7px 7px 8px;
     	border-radius: 10px;
 	}
 
@@ -267,10 +281,7 @@ span {
 
 	 a {
 		text-decoration: unset;
-	
 	}
-
-
 
 	/* TABLETTE Media Query pour écran moins de 1080px */
 	@media (max-width: $tablette) {
@@ -308,6 +319,4 @@ span {
 	}
 	/* Fin Media Query pour moins de 700px */
 
-
 </style>
-
